@@ -1,45 +1,59 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Samsam</title>
+    <title>Samsam | Creative Space</title>
     <style>
         body {
             margin: 0;
             font-family: 'Segoe UI', sans-serif;
-            background: linear-gradient(135deg, #1e1e2f, #3a3a5a);
+            background: linear-gradient(135deg, #1e1e2f, #2c2c54);
             color: white;
+        }
+
+        nav {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
+            justify-content: space-between;
+            padding: 20px 50px;
+            background: rgba(0,0,0,0.3);
         }
 
-        .card {
-            background: rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(10px);
-            padding: 60px;
-            border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
-            max-width: 500px;
-        }
-
-        h1 {
-            font-size: 48px;
-            margin-bottom: 10px;
+        nav h2 {
+            margin: 0;
             letter-spacing: 2px;
         }
 
-        p {
-            opacity: 0.8;
-            font-size: 18px;
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 14px;
         }
 
-        button {
+        .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            text-align: center;
+            flex-direction: column;
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: 20px;
+            opacity: 0.8;
+            margin-top: 10px;
+        }
+
+        .btn {
             margin-top: 30px;
             padding: 12px 30px;
-            border: none;
             border-radius: 30px;
+            border: none;
             background: white;
             color: black;
             font-weight: bold;
@@ -47,23 +61,75 @@
             transition: 0.3s;
         }
 
-        button:hover {
+        .btn:hover {
             transform: scale(1.05);
         }
+
+        .section {
+            padding: 80px 50px;
+            text-align: center;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.08);
+            padding: 30px;
+            border-radius: 15px;
+            width: 250px;
+        }
+
     </style>
 </head>
 <body>
 
-    <div class="card">
-        <h1>SAMSAM</h1>
-        <p>creating something cool on the internet ✨</p>
-        <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee"
-     alt="unicornio aesthetic"
-     style="width:250px; margin-top:20px; border-radius:20px;">
-        <button onclick="alert('Bienvenida a mi espacio aesthetic 💫')">
-            enter
-        </button>
+<nav>
+    <h2>SAMSAM</h2>
+    <div>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
     </div>
+</nav>
+
+<div class="hero">
+    <h1>Hi, I'm Samsam ✨</h1>
+    <p>Building cool things on the internet.</p>
+    <button class="btn">Explore</button>
+</div>
+
+<div class="section" id="about">
+    <h2>About Me</h2>
+    <p>I love creating digital spaces that feel aesthetic and modern.</p>
+</div>
+
+<div class="section" id="projects">
+    <h2>Projects</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Website 01</h3>
+            <p>Minimal landing page design.</p>
+        </div>
+        <div class="card">
+            <h3>Website 02</h3>
+            <p>Creative portfolio concept.</p>
+        </div>
+        <div class="card">
+            <h3>Website 03</h3>
+            <p>Experimental UI idea.</p>
+        </div>
+    </div>
+</div>
+
+<div class="section" id="contact">
+    <h2>Contact</h2>
+    <p>Email: your@email.com</p>
+</div>
 
 </body>
 </html>
